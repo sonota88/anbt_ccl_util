@@ -1,11 +1,11 @@
 #!/usr/bin/ruby -Ku
 
-class CCL
-  def url_parse(urlstr)
+module CCL
+  def self.url_parse(urlstr)
     return urlstr.sub( /^http:\/\/(.+)$/, '\1' )
   end
   
-  def url2abbr(urlstr)
+  def self.url2abbr(urlstr)
     path = url_parse(urlstr) 
     
     pieces = path.split("/")
@@ -59,4 +59,14 @@ class CCL
     return  licenseText
   end
 end
+
+
+=begin
+
+= References
+
+License Properties - CC Wiki
+http://wiki.creativecommons.org/License_Properties
+
+=end
 
